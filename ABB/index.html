@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="\assets\css\styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <title>Əmanətlər</title>
 </head>
 <body>
@@ -16,31 +17,24 @@
             <a href="">Rəqəmsal bankçılıq</a>
             <a href="">Əlavə xidmətlər</a>
         </div>
-        <div class="search">
-            <a href=""><img src="../assets/img/search.svg" alt=""></a> 
+        <div class="search-button">
+            <a id = "search"><img src="../assets/img/search.svg" alt=""></a> 
             <span class="">Axtarış</span>
         </div>
-        <div class="info">
-            <button>Əlavə et</button>
+        <div class="insert-button">
+            <button onclick="addData()" type="button">Əlavə et</button>
         </div>
     </div>
-    <div class="container" id="js-search-bar">
-        <div class="row">
-            <div class="col-12">
-                <form action="https://abb-bank.az/az/axtarish" method="get" class="col-lg-12 px-0 d-flex align-items-center" data-cb-wrapper="true">
-                    <label class="w-100 pos-relative">
-                        <span class="d-flex pos-absolute left-0 bg-9f9f9f top-center"></span>
-                        <input type="text" name="query" class="w-100 h-75 h-lg-140 fs-18 fs-lg-40 fw-300 pr-3 pr-lg-5 border-0 bg-transparent color-9f9f9f" placeholder="Sizə necə kömək edə bilərik?">
-                    </label>
-
-                    <label class="right-0">
-                        <div class="d-flex align-items-center h-100p pl-3 cursor-p outline-0 border-0 bg-transparent" id="js-search-close">
-                            <span class="icon square-20 icon-close-light"></span>
-                        </div>
-                    </label>
-                </form>
-            </div>
-        </div>
+    <div class="search-input">
+        <input type="text" id="input-text" placeholder="Sizə necə kömək edə bilərik?">
+        <button id="close-button"><i class="fa-solid fa-xmark"></i></button>     
     </div>
+    <table id="outputTable"> 
+        <tr> 
+            <th>Ad</th>  
+            <th>Əməliyyat</th> 
+        </tr> 
+    </table> 
+    <script src="./assets/app.js"></script>
 </body>
 </html>
